@@ -97,11 +97,18 @@ function scrollToTop() {
 
 onMounted(() => {
   let lastY = 0
+  let idleTimer: ReturnType<typeof setTimeout> | null = null
+
   window.addEventListener('scroll', () => {
     const y = window.scrollY
     scrolled.value = y > 40
     hidden.value = y > 80 && y > lastY
     lastY = y
+
+    if (idleTimer) clearTimeout(idleTimer)
+    idleTimer = setTimeout(() => {
+      if (window.scrollY > 80) hidden.value = true
+    }, 3000)
   }, { passive: true })
 })
 </script>

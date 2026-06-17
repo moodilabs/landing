@@ -686,7 +686,7 @@ onUnmounted(() => { if (timer) clearInterval(timer) })
   :deep(.section-sub) { font-size: 14px; }
   .phone-outer {
     width: 200px;
-    filter: drop-shadow(0 12px 24px rgba(0,0,0,0.5)) drop-shadow(0 0 1px rgba(255,255,255,0.05));
+    filter: none;
   }
   .phone-screen { height: 420px; }
   .step-dots { margin-bottom: 20px; }
