@@ -631,11 +631,7 @@ function scrollToWaitlist() {
 }
 
 @media (max-width: 480px) {
-  .hero { padding: 90px 0 40px; }
-  .hero-visual { display: block; width: 100%; }
-  .phone-wrap { width: 160px; }
-  .phone-screen { height: 340px; }
-  .hero-subtitle { display: none; }
-  .float-card-1, .float-card-2 { display: none; }
+  .hero { padding: 100px 0 60px; }
+  .hero-visual { display: none; }
 }
 </style>
