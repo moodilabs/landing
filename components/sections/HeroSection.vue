@@ -631,7 +631,7 @@ function scrollToWaitlist() {
 }
 
 @media (max-width: 480px) {
-  .hero { padding: 100px 0 60px; }
+  .hero { padding: 68px 0; justify-content: center; }
   .hero-visual { display: none; }
 }
 </style>
