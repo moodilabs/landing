@@ -26,7 +26,7 @@
             {{ lang.label }}
           </button>
         </div>
-        <button class="btn btn-primary header-cta" @click="scrollToTop">{{ $t('nav.cta') }}</button>
+        <button class="btn btn-primary header-cta" @click="scrollTo('waitlist')">{{ $t('nav.cta') }}</button>
         <button class="hamburger" :class="{ active: menuOpen }" @click="menuOpen = !menuOpen" aria-label="Menu">
           <span /><span /><span />
         </button>
