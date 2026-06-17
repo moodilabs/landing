@@ -13,20 +13,11 @@
         <h1 class="hero-title" v-html="titleHtml" />
         <p class="hero-subtitle">{{ $t('hero.subtitle') }}</p>
         <div class="hero-ctas">
-          <a href="#" class="store-btn">
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M14.33 10.56c-.02-2.09 1.71-3.1 1.79-3.15-.98-1.43-2.49-1.62-3.03-1.64-1.3-.13-2.54.76-3.2.76-.66 0-1.68-.74-2.76-.72-1.42.02-2.73.83-3.46 2.1-1.48 2.57-.38 6.37 1.06 8.46.7 1.02 1.54 2.16 2.64 2.12 1.06-.04 1.46-.68 2.74-.68 1.28 0 1.64.68 2.76.66 1.14-.02 1.87-1.04 2.56-2.07.82-1.18 1.15-2.34 1.17-2.4-.03-.01-2.25-.86-2.27-3.44zM12.27 4.36c.58-.71.98-1.69.87-2.67-.84.03-1.86.56-2.46 1.27-.54.62-1.01 1.62-.88 2.57.93.07 1.88-.47 2.47-1.17z" fill="currentColor"/></svg>
-            <div class="store-text">
-              <span class="store-sub">Download on the</span>
-              <span class="store-name">{{ $t('hero.cta_ios') }}</span>
-            </div>
+          <a href="#waitlist" class="cta-btn">
+            {{ $t('nav.cta') }}
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </a>
-          <a href="#" class="store-btn">
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M2.83 1.14a1 1 0 0 0-.33.75v16.22a1 1 0 0 0 .33.75l.04.04 9.08-9.08v-.21L2.87 1.1l-.04.04zM15.14 13.46l-3.02-3.02v-.21l3.02-3.02.07.04 3.58 2.03c1.02.58 1.02 1.53 0 2.11l-3.58 2.03-.07.04zM15.21 13.42l-3.09-3.09-9.29 9.29c.34.36.9.41 1.53.05l10.85-6.25" fill="currentColor"/><path d="M15.21 6.58L4.36.33C3.73-.03 3.17.02 2.83.38l9.29 9.29 3.09-3.09z" fill="currentColor"/></svg>
-            <div class="store-text">
-              <span class="store-sub">Get it on</span>
-              <span class="store-name">{{ $t('hero.cta_android') }}</span>
-            </div>
-          </a>
+          <span class="hero-coming">{{ $t('hero.badge') }}</span>
         </div>
       </div>
 
@@ -276,23 +267,29 @@ const titleHtml = computed(() => t('hero.title').replace('\n', '<br>'))
   margin-bottom: 40px;
 }
 
-.hero-ctas { display: flex; flex-wrap: wrap; gap: 12px; }
+.hero-ctas { display: flex; align-items: center; flex-wrap: wrap; gap: 16px; }
 
-.store-btn {
-  display: flex;
+.cta-btn {
+  display: inline-flex;
   align-items: center;
-  gap: 12px;
-  padding: 12px 20px;
-  background: rgba(255,255,255,0.06);
-  border: 1px solid rgba(255,255,255,0.15);
+  gap: 8px;
+  padding: 14px 28px;
+  background: var(--purple-500);
   border-radius: 12px;
   color: var(--white);
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
   transition: all 0.2s ease;
+  box-shadow: 0 0 24px rgba(92, 67, 232, 0.5);
 }
-.store-btn:hover { background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.3); transform: translateY(-2px); }
-.store-text { display: flex; flex-direction: column; }
-.store-sub { font-size: 10px; color: rgba(255,255,255,0.45); line-height: 1; margin-bottom: 2px; }
-.store-name { font-size: 15px; font-weight: 700; line-height: 1; }
+.cta-btn:hover { background: #6d55f0; transform: translateY(-2px); box-shadow: 0 0 36px rgba(92, 67, 232, 0.7); }
+
+.hero-coming {
+  font-size: 13px;
+  color: rgba(255,255,255,0.35);
+  font-weight: 500;
+}
 
 /* ===== 리얼 폰 목업 ===== */
 .hero-visual {
