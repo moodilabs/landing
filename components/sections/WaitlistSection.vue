@@ -415,6 +415,7 @@ async function submit() {
     width: 100%;
     box-sizing: border-box;
     transition: border-color 0.2s;
+    font-size: 16px;
   }
   .wl-input:focus {
     border-color: var(--purple);
