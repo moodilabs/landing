@@ -1,4 +1,6 @@
 <template>
+  <div>
+    <AppHeader />
   <div class="privacy-page">
     <div class="container">
       <a href="/" class="back-link">{{ c.back }}</a>
@@ -25,6 +27,8 @@
         </table>
       </section>
     </div>
+  </div>
+  <AppFooter />
   </div>
 </template>
 
@@ -76,7 +80,7 @@ const content: Record<string, any> = {
       },
       {
         title: 'Article 6 — Rights of Data Subjects',
-        paragraphs: ['Users may exercise the following rights at any time:', 'To make a request, email <a href="mailto:contact@moodi.kr">contact@moodi.kr</a>. We will respond within 10 business days.'],
+        paragraphs: ['Users may exercise the following rights at any time:', 'To make a request, email <a href="mailto:kimdonghwan913@gmail.com">kimdonghwan913@gmail.com</a>. We will respond within 10 business days.'],
         items: ['Right to access personal information', 'Right to correct or delete personal information', 'Right to suspend processing'],
       },
       {
@@ -87,7 +91,7 @@ const content: Record<string, any> = {
       {
         title: 'Article 8 — Privacy Officer',
         paragraphs: ['For inquiries regarding personal information, please contact us:'],
-        items: ['Email: <a href="mailto:contact@moodi.kr">contact@moodi.kr</a>'],
+        items: ['Email: <a href="mailto:kimdonghwan913@gmail.com">kimdonghwan913@gmail.com</a>'],
       },
       {
         title: 'Article 9 — Changes to This Policy',
@@ -139,7 +143,7 @@ const content: Record<string, any> = {
       },
       {
         title: '第六条 — 用户权利',
-        paragraphs: ['用户可随时行使以下权利：', '请发送邮件至 <a href="mailto:contact@moodi.kr">contact@moodi.kr</a> 提出申请，我们将在10个工作日内处理。'],
+        paragraphs: ['用户可随时行使以下权利：', '请发送邮件至 <a href="mailto:kimdonghwan913@gmail.com">kimdonghwan913@gmail.com</a> 提出申请，我们将在10个工作日内处理。'],
         items: ['查阅个人信息', '更正或删除个人信息', '要求停止处理'],
       },
       {
@@ -150,7 +154,7 @@ const content: Record<string, any> = {
       {
         title: '第八条 — 个人信息保护负责人',
         paragraphs: ['如有个人信息相关问题，请联系：'],
-        items: ['邮箱：<a href="mailto:contact@moodi.kr">contact@moodi.kr</a>'],
+        items: ['邮箱：<a href="mailto:kimdonghwan913@gmail.com">kimdonghwan913@gmail.com</a>'],
       },
       {
         title: '第九条 — 政策变更',
@@ -202,7 +206,7 @@ const content: Record<string, any> = {
       },
       {
         title: '第6条 — 情報主体の権利',
-        paragraphs: ['ユーザーはいつでも以下の権利を行使できます：', '<a href="mailto:contact@moodi.kr">contact@moodi.kr</a> までメールにてご連絡ください。10営業日以内に対応いたします。'],
+        paragraphs: ['ユーザーはいつでも以下の権利を行使できます：', '<a href="mailto:kimdonghwan913@gmail.com">kimdonghwan913@gmail.com</a> までメールにてご連絡ください。10営業日以内に対応いたします。'],
         items: ['個人情報の閲覧請求', '個人情報の訂正・削除請求', '個人情報処理の停止請求'],
       },
       {
@@ -213,7 +217,7 @@ const content: Record<string, any> = {
       {
         title: '第8条 — 個人情報保護責任者',
         paragraphs: ['個人情報に関するお問い合わせは以下までご連絡ください：'],
-        items: ['メール：<a href="mailto:contact@moodi.kr">contact@moodi.kr</a>'],
+        items: ['メール：<a href="mailto:kimdonghwan913@gmail.com">kimdonghwan913@gmail.com</a>'],
       },
       {
         title: '第9条 — プライバシーポリシーの変更',
