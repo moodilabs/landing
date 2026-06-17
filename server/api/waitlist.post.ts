@@ -4,7 +4,6 @@ import { createClient } from '@supabase/supabase-js'
 export default defineEventHandler(async (event) => {
   const body = await readBody(event)
   const email: string = (body?.email ?? '').trim().toLowerCase()
-  const locale: string = body?.locale ?? 'en'
   const country: string = getHeader(event, 'x-vercel-ip-country') ?? 'unknown'
 
   if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
@@ -22,7 +21,7 @@ export default defineEventHandler(async (event) => {
 
   const { error } = await supabase
     .from('waitlist')
-    .upsert({ email, locale, country }, { onConflict: 'email', ignoreDuplicates: true })
+    .upsert({ email, country }, { onConflict: 'email', ignoreDuplicates: true })
 
   if (error) {
     console.error('[Waitlist] Supabase error:', error.message)
