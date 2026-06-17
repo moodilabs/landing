@@ -685,11 +685,20 @@ onUnmounted(() => { if (timer) clearInterval(timer) })
   :deep(.section-head) { margin-bottom: 24px; }
   :deep(.section-title) { font-size: 22px; margin-bottom: 8px; }
   :deep(.section-sub) { font-size: 14px; }
-  .phone-outer {
-    width: 200px;
-    filter: none;
+
+  /* 프레임 제거, 스크린만 */
+  .phone-outer { width: 220px; filter: none; }
+  .pb-silent, .pb-vol-up, .pb-vol-dn, .pb-power { display: none; }
+  .phone-body {
+    background: transparent;
+    border-radius: 24px;
+    padding: 0;
+    box-shadow: 0 0 0 1.5px rgba(255,255,255,0.12);
   }
-  .phone-screen { height: 420px; }
+  .phone-screen { height: 440px; border-radius: 24px; }
+  .d-island { display: none; }
+  .d-status { padding-top: 12px; }
+
   .step-dots { margin-bottom: 20px; }
   .step-dot { width: 30px; height: 30px; font-size: 9px; }
   .step-dot-line { width: 16px; }
