@@ -1,7 +1,5 @@
 import { defineEventHandler, readBody, createError } from 'h3'
-
-// In-memory store for development — replace with DB or external service call
-const waitlistEmails: { email: string; locale: string; joinedAt: string }[] = []
+import { createClient } from '@supabase/supabase-js'
 
 export default defineEventHandler(async (event) => {
   const body = await readBody(event)
@@ -12,20 +10,23 @@ export default defineEventHandler(async (event) => {
     throw createError({ statusCode: 400, statusMessage: 'Invalid email address' })
   }
 
-  if (waitlistEmails.some(e => e.email === email)) {
-    // Return success silently — don't leak whether email was already registered
-    return { success: true }
+  const supabaseUrl = process.env.SUPABASE_URL
+  const supabaseKey = process.env.SUPABASE_SERVICE_KEY
+
+  if (!supabaseUrl || !supabaseKey) {
+    throw createError({ statusCode: 500, statusMessage: 'Server configuration error' })
   }
 
-  waitlistEmails.push({ email, locale, joinedAt: new Date().toISOString() })
+  const supabase = createClient(supabaseUrl, supabaseKey)
 
-  // TODO: Replace with one of these when ready:
-  // Option A — Spring Boot backend:
-  //   await $fetch('http://localhost:8080/api/waitlist', { method: 'POST', body: { email } })
-  // Option B — Send email via Resend/Mailgun:
-  //   await $fetch('https://api.resend.com/emails', { ... })
+  const { error } = await supabase
+    .from('waitlist')
+    .upsert({ email, locale }, { onConflict: 'email', ignoreDuplicates: true })
 
-  console.log(`[Waitlist] New signup: ${email} (${locale}) — total: ${waitlistEmails.length}`)
+  if (error) {
+    console.error('[Waitlist] Supabase error:', error.message)
+    throw createError({ statusCode: 500, statusMessage: 'Failed to save email' })
+  }
 
   return { success: true }
 })
