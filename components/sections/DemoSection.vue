@@ -681,10 +681,16 @@ onUnmounted(() => { if (timer) clearInterval(timer) })
 }
 
 @media (max-width: 480px) {
-  .phone-outer { width: 270px; }
-  .phone-screen { height: 580px; }
-  .step-dot { width: 36px; height: 36px; font-size: 10px; }
-  .step-dot-line { width: 24px; }
-  .mobile-step-title { font-size: 20px; }
+  .section-head { margin-bottom: 28px; }
+  .section-head .section-title { font-size: 24px; margin-bottom: 8px; }
+  .section-head .section-sub { font-size: 14px; }
+  .phone-outer { width: 200px; }
+  .phone-screen { height: 420px; }
+  .step-dots { margin-bottom: 20px; }
+  .step-dot { width: 30px; height: 30px; font-size: 9px; }
+  .step-dot-line { width: 16px; }
+  .mobile-step-info { margin-top: 20px; }
+  .mobile-step-title { font-size: 18px; margin-bottom: 6px; }
+  .mobile-step-desc { font-size: 13px; }
 }
 </style>
