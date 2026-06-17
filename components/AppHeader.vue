@@ -72,8 +72,14 @@ function scrollTo(id: string) {
   }
 }
 
+const route = useRoute()
+
 function scrollToTop() {
-  window.scrollTo({ top: 0, behavior: 'smooth' })
+  if (route.path !== '/') {
+    navigateTo('/')
+  } else {
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
 }
 
 onMounted(() => {
