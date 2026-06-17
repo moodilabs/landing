@@ -39,27 +39,30 @@ export default defineNuxtConfig({
         { name: 'theme-color', content: '#09090C' },
 
         // Primary SEO
-        { hid: 'description', name: 'description', content: 'Discover hidden Korean spots that match your aesthetic. Upload your mood photos and let MOODI\'s AI find the perfect spots and plan your route.' },
-        { name: 'keywords', content: 'Korea travel, mood travel, aesthetic travel, Korean spots, AI travel planner, Seoul travel, Korea tourism' },
+        { hid: 'description', name: 'description', content: 'MOODI finds hidden Korean cafes, streets, and spots that match your aesthetic — no keywords needed. Upload 1–5 mood photos and get an AI-generated Seoul travel route in under 60 seconds.' },
+        { name: 'keywords', content: 'Korea travel app, Seoul travel guide, aesthetic travel Korea, hidden spots Seoul, AI travel planner Korea, mood travel app, Korean cafe aesthetic, film cafe Seoul, vintage spots Korea, Seongsu travel, Hongdae spots, Seoul itinerary, Korean travel route, aesthetic spots Seoul, hidden gems Korea, travel app for foreigners, Seoul aesthetic spots, Korea travel 2026, best cafes Seoul, Korean travel planning app' },
         { name: 'robots', content: 'index, follow' },
 
         // Open Graph
         { property: 'og:type', content: 'website' },
         { property: 'og:site_name', content: 'MOODI' },
-        { hid: 'og:title', property: 'og:title', content: 'MOODI — Travel Korea by Your Mood' },
-        { hid: 'og:description', property: 'og:description', content: 'Discover Korean spots that match your aesthetic. Upload mood photos, get AI-matched spots and routes.' },
-        { property: 'og:image', content: '/og-image.png' },
+        { hid: 'og:title', property: 'og:title', content: 'MOODI — Discover Korea by Your Aesthetic' },
+        { hid: 'og:description', property: 'og:description', content: 'Upload 1–5 mood photos. MOODI\'s AI finds hidden Korean spots that match your vibe and builds your travel route in under 60 seconds.' },
+        { property: 'og:url', content: 'https://moodi.kr' },
+        { property: 'og:image', content: 'https://moodi.kr/og-image.png' },
         { property: 'og:image:width', content: '1200' },
         { property: 'og:image:height', content: '630' },
+        { property: 'og:image:alt', content: 'MOODI — AI-powered mood-based Korea travel app' },
         { property: 'og:locale', content: 'en_US' },
         { property: 'og:locale:alternate', content: 'zh_CN' },
         { property: 'og:locale:alternate', content: 'ja_JP' },
 
         // Twitter Card
         { name: 'twitter:card', content: 'summary_large_image' },
-        { name: 'twitter:title', content: 'MOODI — Travel Korea by Your Mood' },
-        { name: 'twitter:description', content: 'Discover Korean spots that match your aesthetic.' },
-        { name: 'twitter:image', content: '/og-image.png' },
+        { name: 'twitter:site', content: '@moodi_app' },
+        { name: 'twitter:title', content: 'MOODI — Discover Korea by Your Aesthetic' },
+        { name: 'twitter:description', content: 'Upload mood photos → AI finds hidden Korean spots → get your travel route in 60 seconds.' },
+        { name: 'twitter:image', content: 'https://moodi.kr/og-image.png' },
 
         // Naver Search Advisor (웹마스터 도구)
         { name: 'naver-site-verification', content: NAVER_VERIFY },
@@ -75,6 +78,23 @@ export default defineNuxtConfig({
       ],
       // Google Analytics 4 — gtag.js
       script: [
+        {
+          type: 'application/ld+json',
+          innerHTML: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'MobileApplication',
+            name: 'MOODI',
+            url: 'https://moodi.kr',
+            description: 'AI-powered mood-based travel app that finds hidden Korean spots matching your aesthetic. Upload mood photos and get a personalized travel route in under 60 seconds.',
+            applicationCategory: 'TravelApplication',
+            operatingSystem: 'iOS, Android',
+            offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+            aggregateRating: { '@type': 'AggregateRating', ratingValue: '5', ratingCount: '1' },
+            author: { '@type': 'Organization', name: 'MOODI', url: 'https://moodi.kr' },
+            keywords: 'Korea travel, Seoul spots, aesthetic travel, AI travel planner, mood travel',
+            inLanguage: ['en', 'zh', 'ja'],
+          }),
+        },
         {
           src: `https://www.googletagmanager.com/gtag/js?id=${GA4_ID}`,
           async: true,
