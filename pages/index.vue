@@ -12,6 +12,7 @@
       <AdditionalFeaturesSection />
       <GoalsSection />
       <FinalOutputSection />
+      <WaitlistSection />
     </main>
     <AppFooter />
   </div>
