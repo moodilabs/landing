@@ -13,7 +13,7 @@
         <h1 class="hero-title" v-html="titleHtml" />
         <p class="hero-subtitle">{{ $t('hero.subtitle') }}</p>
         <div class="hero-ctas">
-          <a href="#waitlist" class="cta-btn">
+          <a href="#waitlist" class="cta-btn" @click.prevent="scrollToWaitlist">
             {{ $t('nav.cta') }}
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </a>
@@ -177,6 +177,14 @@
 <script setup lang="ts">
 const { t } = useI18n()
 const titleHtml = computed(() => t('hero.title').replace('\n', '<br>'))
+
+function scrollToWaitlist() {
+  const el = document.getElementById('waitlist')
+  if (el) {
+    const top = el.getBoundingClientRect().top + window.scrollY - 80
+    window.scrollTo({ top, behavior: 'smooth' })
+  }
+}
 </script>
 
 <style scoped>
