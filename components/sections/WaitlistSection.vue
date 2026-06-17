@@ -20,13 +20,16 @@
               required
               :disabled="loading"
             />
-            <button type="submit" class="wl-btn" :disabled="loading || !email">
+            <button type="submit" class="wl-btn" :disabled="loading || !email || !agreed">
               <span v-if="loading" class="wl-spinner" />
               <span v-else>{{ ctaText }}</span>
             </button>
           </div>
+          <label class="wl-consent">
+            <input v-model="agreed" type="checkbox" class="wl-checkbox" :disabled="loading" />
+            <span class="wl-consent-text" v-html="consentText" />
+          </label>
           <p v-if="error" class="wl-error">{{ error }}</p>
-          <p class="wl-privacy">{{ privacyText }}</p>
         </form>
 
         <div v-else class="wl-success">
@@ -53,6 +56,7 @@ const email = ref('')
 const loading = ref(false)
 const submitted = ref(false)
 const error = ref('')
+const agreed = ref(false)
 
 const content = computed(() => {
   const map: Record<string, any> = {
@@ -63,6 +67,7 @@ const content = computed(() => {
       placeholder: 'Enter your email address',
       cta: 'Join Waitlist',
       privacy: 'No spam. Unsubscribe anytime.',
+      consent: 'I agree to the collection and use of my email address for MOODI launch notifications. <a href="/privacy" target="_blank">Privacy Policy</a>',
       successTitle: "You're on the list!",
       successSub: "We'll notify you when MOODI is ready. Stay tuned.",
       stats: [
@@ -78,6 +83,7 @@ const content = computed(() => {
       placeholder: '请输入您的电子邮件',
       cta: '加入等待名单',
       privacy: '不发送垃圾邮件，随时可取消订阅。',
+      consent: '我同意收集并使用我的电子邮件地址，用于接收 MOODI 发布通知。<a href="/privacy" target="_blank">隐私政策</a>',
       successTitle: '您已成功加入！',
       successSub: 'MOODI 上线时，我们将第一时间通知您。敬请期待。',
       stats: [
@@ -93,6 +99,7 @@ const content = computed(() => {
       placeholder: 'メールアドレスを入力',
       cta: 'ウェイトリストに登録',
       privacy: 'スパムはありません。いつでも解除できます。',
+      consent: 'MOODIのリリース通知のためにメールアドレスの収集・利用に同意します。<a href="/privacy" target="_blank">プライバシーポリシー</a>',
       successTitle: 'リスト登録完了！',
       successSub: 'MOODIの準備が整い次第、ご連絡します。お楽しみに。',
       stats: [
@@ -111,6 +118,7 @@ const subText = computed(() => content.value.sub)
 const placeholderText = computed(() => content.value.placeholder)
 const ctaText = computed(() => content.value.cta)
 const privacyText = computed(() => content.value.privacy)
+const consentText = computed(() => content.value.consent)
 const successTitle = computed(() => content.value.successTitle)
 const successSub = computed(() => content.value.successSub)
 const stats = computed(() => content.value.stats)
@@ -290,10 +298,33 @@ async function submit() {
   margin-bottom: 8px;
 }
 
-.wl-privacy {
+.wl-consent {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  text-align: left;
+}
+
+.wl-checkbox {
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+  margin-top: 2px;
+  accent-color: var(--purple);
+  cursor: pointer;
+}
+
+.wl-consent-text {
   font-size: 12px;
-  color: rgba(255,255,255,0.3);
-  margin-bottom: 40px;
+  line-height: 1.6;
+  color: rgba(255,255,255,0.35);
+}
+
+.wl-consent-text :deep(a) {
+  color: var(--purple-200);
+  text-decoration: underline;
 }
 
 .wl-success {
