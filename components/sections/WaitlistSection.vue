@@ -71,7 +71,6 @@ const content = computed(() => {
       successTitle: "You're on the list!",
       successSub: "We'll notify you when MOODI is ready. Stay tuned.",
       stats: [
-        { num: '2,000+', label: 'Early signups' },
         { num: 'Q3 2026', label: 'Launch target' },
         { num: 'Free', label: 'During beta' },
       ],
@@ -87,7 +86,6 @@ const content = computed(() => {
       successTitle: '您已成功加入！',
       successSub: 'MOODI 上线时，我们将第一时间通知您。敬请期待。',
       stats: [
-        { num: '2,000+', label: '早期注册用户' },
         { num: '2026年Q3', label: '目标上线时间' },
         { num: '免费', label: '测试期间' },
       ],
@@ -103,7 +101,6 @@ const content = computed(() => {
       successTitle: 'リスト登録完了！',
       successSub: 'MOODIの準備が整い次第、ご連絡します。お楽しみに。',
       stats: [
-        { num: '2,000+', label: '早期登録者数' },
         { num: '2026年Q3', label: 'リリース予定' },
         { num: '無料', label: 'ベータ期間中' },
       ],
