@@ -70,7 +70,7 @@ export default defineNuxtConfig({
           rel: 'stylesheet',
           href: 'https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css',
         },
-        { rel: 'canonical', href: 'https://moodi.app' },
+        { rel: 'canonical', href: 'https://moodi.kr' },
         { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
       ],
       // Google Analytics 4 — gtag.js
