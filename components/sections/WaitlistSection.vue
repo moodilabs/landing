@@ -252,6 +252,13 @@ async function submit() {
 .wl-input:disabled {
   opacity: 0.5;
 }
+.wl-input:-webkit-autofill,
+.wl-input:-webkit-autofill:hover,
+.wl-input:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0px 1000px #16161e inset !important;
+  -webkit-text-fill-color: white !important;
+  transition: background-color 5000s ease-in-out 0s;
+}
 
 .wl-btn {
   flex-shrink: 0;
@@ -389,10 +396,31 @@ async function submit() {
 @media (max-width: 640px) {
   .wl-input-wrap {
     flex-direction: column;
-    padding: 12px 16px;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    padding: 0;
     gap: 10px;
+    box-shadow: none;
   }
-  .wl-btn { width: 100%; }
+  .wl-input-wrap:focus-within {
+    box-shadow: none;
+    border: none;
+  }
+  .wl-input {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.14);
+    border-radius: 12px;
+    padding: 14px 18px;
+    width: 100%;
+    box-sizing: border-box;
+    transition: border-color 0.2s;
+  }
+  .wl-input:focus {
+    border-color: var(--purple);
+    box-shadow: 0 0 0 3px rgba(92, 67, 232, 0.15);
+  }
+  .wl-btn { width: 100%; border-radius: 12px; padding: 14px; }
   .wl-stats { gap: 24px; }
 }
 </style>
