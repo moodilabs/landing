@@ -1,0 +1,265 @@
+{
+  "nav": {
+    "persona": "Persona",
+    "problem": "Problem",
+    "solution": "Solution",
+    "features": "Features",
+    "goals": "Goals",
+    "cta": "Get Early Access"
+  },
+  "hero": {
+    "eyebrow": "Coming Soon · iOS & Android",
+    "title": "Travel Korea\nBy Your Mood",
+    "subtitle": "Upload a photo that inspires you. MOODI finds Korean spots that match your aesthetic — perfectly.",
+    "cta_ios": "App Store",
+    "cta_android": "Google Play",
+    "badge": "Coming Soon"
+  },
+  "persona": {
+    "eyebrow": "User Persona",
+    "title": "Who MOODI is for",
+    "subtitle": "Travelers who have a clear aesthetic but struggle to find spots that match it in Korea.",
+    "items": [
+      {
+        "name": "Yuki",
+        "from": "Tokyo, Japan",
+        "role": "The Aesthetic Explorer",
+        "quote": "I want spots in Seoul that feel like my Pinterest board — not the ones every tourist visits.",
+        "traits": ["Film photography", "Vintage vibes", "Cafe hopping"]
+      },
+      {
+        "name": "Luna",
+        "from": "Shanghai, China",
+        "role": "The Content Creator",
+        "quote": "I need unique spots that match my aesthetic, not just popular ones everyone's already been to.",
+        "traits": ["Social-first", "Trendy minimalist", "Seeks exclusivity"]
+      },
+      {
+        "name": "Jake",
+        "from": "New York, USA",
+        "role": "The Cultural Seeker",
+        "quote": "I want to experience the real Korea — local neighborhoods, hidden gems, authentic culture.",
+        "traits": ["Anti-tourist traps", "Cultural depth", "Authentic experiences"]
+      }
+    ]
+  },
+  "problem": {
+    "eyebrow": "Problem Definition",
+    "title": "Finding your vibe in Korea\nis harder than it should be",
+    "subtitle": "Millions of travelers visit Korea each year. Most end up at the same 10 spots.",
+    "items": [
+      {
+        "icon": "🎯",
+        "title": "Generic Recommendations",
+        "desc": "Existing travel apps recommend the same popular spots to everyone, regardless of personal aesthetic or style preference."
+      },
+      {
+        "icon": "🌏",
+        "title": "Language Barrier",
+        "desc": "Researching niche Korean spots without reading Korean is time-consuming, and translations miss cultural nuance."
+      },
+      {
+        "icon": "⏱",
+        "title": "Planning Overload",
+        "desc": "Building a coherent travel itinerary requires hours of research, cross-referencing maps, and manual optimization."
+      }
+    ]
+  },
+  "solution": {
+    "eyebrow": "Solution",
+    "title": "Just show us\nyour mood",
+    "subtitle": "No keywords. No language barrier. Just photos that represent the vibe you want.",
+    "steps": [
+      {
+        "num": "01",
+        "title": "Upload Your Vibe",
+        "desc": "Select photos that capture the aesthetic you're looking for — a film cafe, a moody street, a vintage corner you love."
+      },
+      {
+        "num": "02",
+        "title": "AI Finds Your Spots",
+        "desc": "MOODI's AI analyzes the mood and aesthetic of your photos, then surfaces Korean locations that match — pinned on a map."
+      },
+      {
+        "num": "03",
+        "title": "Plan in Seconds",
+        "desc": "Pick your must-visit spots. Our AI builds an optimized day-by-day itinerary, considering distance and travel time."
+      }
+    ]
+  },
+  "value": {
+    "eyebrow": "Service Value",
+    "title": "Why MOODI is different",
+    "subtitle": "We built MOODI from the ground up around one insight: travelers think in aesthetics, not locations.",
+    "items": [
+      {
+        "icon": "✦",
+        "title": "Mood-First Discovery",
+        "desc": "The only travel app that starts with how you feel, not where you want to go. Your vibe leads the way."
+      },
+      {
+        "icon": "◈",
+        "title": "Visual AI Matching",
+        "desc": "Our AI understands aesthetic moods from images — not keywords — to find your perfect match in Korea."
+      },
+      {
+        "icon": "◉",
+        "title": "Effortless Planning",
+        "desc": "From a handful of photos to a complete travel itinerary in under 60 seconds. Planning was never this easy."
+      }
+    ]
+  },
+  "hypothesis": {
+    "eyebrow": "Hypothesis",
+    "title": "Our key hypotheses",
+    "subtitle": "The assumptions we're validating as we build MOODI.",
+    "items": [
+      {
+        "num": "H1",
+        "title": "Visual preference → Higher satisfaction",
+        "desc": "Travelers who discover spots through mood matching will report higher satisfaction than those using keyword-based search."
+      },
+      {
+        "num": "H2",
+        "title": "Removing language friction unlocks discovery",
+        "desc": "Eliminating language-based search barriers will significantly increase the number of hidden spots international tourists discover."
+      },
+      {
+        "num": "H3",
+        "title": "Personalization drives retention",
+        "desc": "Users who complete the mood preference survey will return to MOODI at 3× the rate of those who skip it."
+      }
+    ]
+  },
+  "demo": {
+    "eyebrow": "How It Works",
+    "title": "See MOODI in action",
+    "subtitle": "From a mood photo to your perfect Korean travel route.",
+    "steps": [
+      { "label": "Browse Mood Feed", "desc": "Explore curated Korean spots in an infinite feed tailored to your taste." },
+      { "label": "Share Your Vibe", "desc": "Pick 1–5 photos that capture your mood — that's all it takes." },
+      { "label": "Spots Auto-Matched", "desc": "AI analyzes your mood and pins the perfect spots on the map." },
+      { "label": "AI Route Generated", "desc": "Your selected spots become an optimized day itinerary automatically." }
+    ],
+    "mockup": {
+      "upload_title": "Pick Your Mood",
+      "upload_sub": "Select 1–5 photos that match your vibe",
+      "upload_count": "3 selected",
+      "upload_cta": "Find Spots →",
+      "route_edit": "Edit",
+      "route_save": "Save Route"
+    }
+  },
+  "core_features": {
+    "eyebrow": "Core Features",
+    "title": "Three pillars of\nthe MOODI experience",
+    "subtitle": "Each feature is designed around one idea: make the best trip plan with the least effort.",
+    "items": [
+      {
+        "tag": "Feed",
+        "title": "Mood Feed",
+        "desc": "A personalized infinite-scroll feed of Korean spots curated to your aesthetic preferences. The more you explore, the smarter it gets.",
+        "tags": ["Personalized", "AI-Powered", "Masonry Layout", "Infinite Scroll"]
+      },
+      {
+        "tag": "Recommend",
+        "title": "Spot Recommend",
+        "desc": "Upload 1–5 mood photos, select a region in Korea, and get a map-based recommendation of spots that match your aesthetic — instantly.",
+        "tags": ["Image AI", "Map View", "Bookmark", "Route-Ready"]
+      },
+      {
+        "tag": "Route",
+        "title": "AI Route",
+        "desc": "Tell MOODI your travel dates, group size, and must-visit spots. Our AI generates an optimized day-by-day itinerary.",
+        "tags": ["AI Generated", "Day-by-Day", "Mood Optimized", "Editable"]
+      }
+    ]
+  },
+  "additional_features": {
+    "eyebrow": "Additional Features",
+    "title": "Everything you need\nfor the perfect trip",
+    "subtitle": "Thoughtful extras that make MOODI a complete travel companion.",
+    "items": [
+      { "icon": "🔖", "title": "Bookmark & Collections", "desc": "Save spots you love and organize them into collections for future trips." },
+      { "icon": "🤝", "title": "Route Sharing", "desc": "Share your routes with friends. They can clone and customize for their own trip." },
+      { "icon": "🔐", "title": "Social Login", "desc": "Sign in instantly with Google or Apple — no password required." },
+      { "icon": "🔔", "title": "Smart Notifications", "desc": "Get notified when new spots matching your mood are added to your area." },
+      { "icon": "📍", "title": "Spot Detail Pages", "desc": "Full spot pages with photos, mood tags, location info, and nearby recommendations." },
+      { "icon": "👥", "title": "Guest Mode", "desc": "Browse the app without signing up. Sign in when you're ready to save or plan." }
+    ]
+  },
+  "goals": {
+    "eyebrow": "Goals",
+    "title": "What success looks like",
+    "subtitle": "Milestones we're building toward for MOODI's launch and beyond.",
+    "items": [
+      { "metric": "1,000+", "label": "MAU in first 3 months" },
+      { "metric": "500+", "label": "Curated spots at launch" },
+      { "metric": "< 1 min", "label": "From mood photo to route" },
+      { "metric": "#1", "label": "Mood-based travel app in Korea" }
+    ]
+  },
+  "output": {
+    "eyebrow": "Final Output",
+    "title": "What we're building",
+    "subtitle": "The complete system behind MOODI — from user-facing app to the AI powering it.",
+    "items": [
+      {
+        "icon": "📱",
+        "title": "iOS & Android App",
+        "desc": "Native mobile experience with smooth animations, intuitive UX, and full offline support for saved routes."
+      },
+      {
+        "icon": "🧠",
+        "title": "AI Recommendation Engine",
+        "desc": "Visual aesthetic matching system trained on Korean travel imagery to surface mood-accurate spots."
+      },
+      {
+        "icon": "🗺",
+        "title": "AI Route Generator",
+        "desc": "Intelligent itinerary builder that optimizes for distance, travel time, and aesthetic consistency."
+      },
+      {
+        "icon": "🏷",
+        "title": "Spot Content Platform",
+        "desc": "Curated database of 500+ unique Korean spots, each tagged with mood, region, and aesthetic category."
+      }
+    ]
+  },
+  "sources": {
+    "eyebrow": "Sources",
+    "title": "Research & Data Behind MOODI",
+    "subtitle": "Our product decisions are grounded in real data and user research.",
+    "items": [
+      {
+        "num": "01",
+        "title": "Korea Tourism Organization",
+        "desc": "2023 Inbound Tourism Statistics — 10.3 million foreign visitors to South Korea. Top source countries: China, Japan, USA, Taiwan, and Southeast Asia.",
+        "link": "english.visitkorea.or.kr"
+      },
+      {
+        "num": "02",
+        "title": "User Research Interviews",
+        "desc": "30 in-depth interviews with foreign travelers aged 20–35 from across Asia, North America, and Europe, conducted over 8 weeks.",
+        "link": null
+      },
+      {
+        "num": "03",
+        "title": "Competitive Analysis",
+        "desc": "Benchmarking against Naver Map, Kakao Map, TripAdvisor, and Pinterest for travel discovery patterns and UX gaps.",
+        "link": null
+      },
+      {
+        "num": "04",
+        "title": "Visual Aesthetic AI Research",
+        "desc": "Academic papers on image-based aesthetic similarity, mood classification, and visual content recommendation systems.",
+        "link": null
+      }
+    ]
+  },
+  "footer": {
+    "tagline": "Travel Korea by Your Mood.",
+    "rights": "© 2026 MOODI. All rights reserved.",
+    "coming": "iOS & Android · Coming Soon"
+  }
+}

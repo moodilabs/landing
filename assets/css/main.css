@@ -1,0 +1,211 @@
+:root {
+  --white: #FFFFFF;
+  --black: #000000;
+
+  --grey-0: #EAEAEE;
+  --grey-10: #DDDDE2;
+  --grey-100: #D5D5DA;
+  --grey-200: #B8B9C4;
+  --grey: #9697A5;
+  --grey-300: #7F808B;
+  --grey-400: #646672;
+  --grey-500: #4D4F58;
+  --grey-600: #393A40;
+  --grey-700: #1E1F24;
+  --grey-800: #09090C;
+
+  --purple-10: #EFEDFF;
+  --purple-100: #CEC6FF;
+  --purple-200: #9A8CF8;
+  --purple-300: #735EED;
+  --purple: #5C43E8;
+  --purple-400: #572DEF;
+  --purple-500: #4D23E4;
+  --purple-600: #411CC7;
+  --purple-700: #3819A9;
+  --purple-800: #23106C;
+  --purple-900: #17094D;
+
+  --font: 'Pretendard Variable', Pretendard, -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  --radius: 16px;
+  --radius-sm: 10px;
+  --radius-full: 100px;
+  --max-w: 1160px;
+  --section-py: 96px;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font);
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--grey-800);
+  background: var(--white);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img { max-width: 100%; height: auto; display: block; }
+a { color: inherit; text-decoration: none; }
+button { font-family: inherit; cursor: pointer; border: none; background: none; }
+ul { list-style: none; }
+
+.container {
+  width: 100%;
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section {
+  padding: var(--section-py) 0;
+}
+
+.section--dark {
+  background: var(--grey-700);
+  color: var(--white);
+}
+
+.section--deeper {
+  background: var(--grey-800);
+  color: var(--white);
+}
+
+.section--tinted {
+  background: var(--purple-10);
+}
+
+.section--soft {
+  background: #F8F8FA;
+}
+
+.section-eyebrow {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--purple);
+  margin-bottom: 14px;
+}
+
+.section--dark .section-eyebrow,
+.section--deeper .section-eyebrow {
+  color: var(--purple-200);
+}
+
+.section-title {
+  font-size: clamp(28px, 4.5vw, 48px);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin-bottom: 16px;
+}
+
+.section-sub {
+  font-size: clamp(16px, 2vw, 18px);
+  line-height: 1.65;
+  color: var(--grey-400);
+  max-width: 560px;
+}
+
+.section--dark .section-sub,
+.section--deeper .section-sub {
+  color: var(--grey-200);
+}
+
+.section-head {
+  margin-bottom: 56px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 26px;
+  border-radius: var(--radius-sm);
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.5;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.btn-primary {
+  background: var(--purple);
+  color: var(--white);
+}
+.btn-primary:hover {
+  background: var(--purple-400);
+  transform: translateY(-1px);
+  box-shadow: 0 8px 28px rgba(92, 67, 232, 0.35);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--grey-700);
+  border: 1.5px solid var(--grey-10);
+}
+.btn-outline:hover {
+  border-color: var(--purple);
+  color: var(--purple);
+}
+
+.btn-outline-light {
+  background: transparent;
+  color: var(--white);
+  border: 1.5px solid rgba(255,255,255,0.25);
+}
+.btn-outline-light:hover {
+  border-color: rgba(255,255,255,0.6);
+  background: rgba(255,255,255,0.08);
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 5px 12px;
+  background: var(--purple-10);
+  color: var(--purple);
+  border-radius: var(--radius-full);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.tag--dark {
+  background: rgba(92, 67, 232, 0.2);
+  color: var(--purple-200);
+}
+
+.card {
+  background: var(--white);
+  border-radius: var(--radius);
+  border: 1px solid var(--grey-0);
+  padding: 32px;
+}
+
+.card--dark {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+@media (max-width: 768px) {
+  :root {
+    --section-py: 64px;
+  }
+  .container {
+    padding: 0 20px;
+  }
+  .section-head {
+    margin-bottom: 40px;
+  }
+}
