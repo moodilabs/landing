@@ -13,10 +13,10 @@
         <h1 class="hero-title" v-html="titleHtml" />
         <p class="hero-subtitle">{{ $t('hero.subtitle') }}</p>
         <div class="hero-ctas">
-          <a href="#waitlist" class="cta-btn" @click.prevent="scrollToWaitlist">
+          <button class="cta-btn" @click="scrollToWaitlist">
             {{ $t('nav.cta') }}
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          </a>
+          </button>
           <span class="hero-coming">{{ $t('hero.badge') }}</span>
         </div>
       </div>
