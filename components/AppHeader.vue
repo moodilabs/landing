@@ -74,6 +74,11 @@ function goToWaitlist() {
   }
 }
 
+function smoothScrollTo(top: number) {
+  window.scrollTo({ top: window.scrollY, behavior: 'instant' as ScrollBehavior })
+  requestAnimationFrame(() => window.scrollTo({ top, behavior: 'smooth' }))
+}
+
 function scrollTo(id: string) {
   menuOpen.value = false
   if (route.path !== '/') {
@@ -83,7 +88,7 @@ function scrollTo(id: string) {
   const el = document.getElementById(id)
   if (el) {
     const top = el.getBoundingClientRect().top + window.scrollY - 80
-    window.scrollTo({ top, behavior: 'smooth' })
+    smoothScrollTo(top)
   }
 }
 
@@ -91,7 +96,7 @@ function scrollToTop() {
   if (route.path !== '/') {
     navigateTo('/')
   } else {
-    window.scrollTo({ top: 0, behavior: 'smooth' })
+    smoothScrollTo(0)
   }
 }
 

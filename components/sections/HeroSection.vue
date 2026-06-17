@@ -182,7 +182,8 @@ function scrollToWaitlist() {
   const el = document.getElementById('waitlist')
   if (el) {
     const top = el.getBoundingClientRect().top + window.scrollY - 80
-    window.scrollTo({ top, behavior: 'smooth' })
+    window.scrollTo({ top: window.scrollY, behavior: 'instant' as ScrollBehavior })
+    requestAnimationFrame(() => window.scrollTo({ top, behavior: 'smooth' }))
   }
 }
 </script>
