@@ -298,12 +298,12 @@ const titleHtml = computed(() => t('hero.title').replace('\n', '<br>'))
 .hero-visual {
   flex-shrink: 0;
   position: relative;
-  width: 300px;
+  width: 340px;
 }
 
 .phone-wrap {
   position: relative;
-  width: 230px;
+  width: 270px;
   margin: 0 auto;
   filter: drop-shadow(0 40px 80px rgba(0,0,0,0.7)) drop-shadow(0 0 1px rgba(255,255,255,0.05));
 }
@@ -342,7 +342,7 @@ const titleHtml = computed(() => t('hero.title').replace('\n', '<br>'))
   position: relative;
   display: flex;
   flex-direction: column;
-  height: 480px;
+  height: 580px;
 }
 
 /* 다이나믹 아일랜드 */

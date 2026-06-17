@@ -1,6 +1,6 @@
 // GA4 Measurement ID와 네이버 서치콘솔 인증코드는 실제 값으로 교체하세요
 const GA4_ID = 'G-XXXXXXXXXX'
-const NAVER_VERIFY = 'YOUR_NAVER_VERIFY_CODE'
+const NAVER_VERIFY = 'd185428d0d31a53f65addf55967d329e61c8b966'
 
 export default defineNuxtConfig({
   devtools: { enabled: false },
