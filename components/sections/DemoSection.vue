@@ -455,9 +455,10 @@ onUnmounted(() => { if (timer) clearInterval(timer) })
 }
 
 /* mobile step info transition */
-.fade-up-enter-active, .fade-up-leave-active { transition: opacity 0.3s ease, transform 0.3s ease; }
-.fade-up-enter-from { opacity: 0; transform: translateY(8px); }
-.fade-up-leave-to { opacity: 0; transform: translateY(-6px); }
+.fade-up-leave-active { transition: opacity 0.15s ease; }
+.fade-up-enter-active { transition: opacity 0.2s ease 0.15s; }
+.fade-up-enter-from { opacity: 0; }
+.fade-up-leave-to { opacity: 0; }
 
 /* ── Shared app components ── */
 .app-hdr { display: flex; justify-content: space-between; align-items: center; flex-shrink: 0; }
