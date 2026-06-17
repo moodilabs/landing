@@ -681,10 +681,13 @@ onUnmounted(() => { if (timer) clearInterval(timer) })
 }
 
 @media (max-width: 480px) {
-  .section-head { margin-bottom: 28px; }
-  .section-head .section-title { font-size: 24px; margin-bottom: 8px; }
-  .section-head .section-sub { font-size: 14px; }
-  .phone-outer { width: 200px; }
+  :deep(.section-head) { margin-bottom: 24px; }
+  :deep(.section-title) { font-size: 22px; margin-bottom: 8px; }
+  :deep(.section-sub) { font-size: 14px; }
+  .phone-outer {
+    width: 200px;
+    filter: drop-shadow(0 12px 24px rgba(0,0,0,0.5)) drop-shadow(0 0 1px rgba(255,255,255,0.05));
+  }
   .phone-screen { height: 420px; }
   .step-dots { margin-bottom: 20px; }
   .step-dot { width: 30px; height: 30px; font-size: 9px; }
