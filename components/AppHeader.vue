@@ -26,7 +26,7 @@
             {{ lang.label }}
           </button>
         </div>
-        <button class="btn btn-primary header-cta" @click="scrollTo('waitlist')">{{ $t('nav.cta') }}</button>
+        <button class="btn btn-primary header-cta" @click="goToWaitlist">{{ $t('nav.cta') }}</button>
         <button class="hamburger" :class="{ active: menuOpen }" @click="menuOpen = !menuOpen" aria-label="Menu">
           <span /><span /><span />
         </button>
@@ -62,6 +62,15 @@ const navItems = [
   { key: 'features' },
   { key: 'goals' },
 ]
+
+function goToWaitlist() {
+  menuOpen.value = false
+  if (route.path !== '/') {
+    navigateTo('/#waitlist')
+  } else {
+    scrollTo('waitlist')
+  }
+}
 
 function scrollTo(id: string) {
   menuOpen.value = false
