@@ -1,5 +1,5 @@
 <template>
-  <header class="header" :class="{ 'header--scrolled': scrolled }">
+  <header class="header" :class="{ 'header--scrolled': scrolled, 'header--hidden': hidden }">
     <div class="header-inner container">
       <button class="logo" @click="scrollToTop">MOODI</button>
 
@@ -41,6 +41,7 @@ const localeCookie = useCookie('moodi_locale', { maxAge: 60 * 60 * 24 * 365 })
 const route = useRoute()
 
 const scrolled = ref(false)
+const hidden = ref(false)
 const menuOpen = ref(false)
 
 const locales = [
@@ -95,9 +96,13 @@ function scrollToTop() {
 }
 
 onMounted(() => {
+  let lastY = 0
   window.addEventListener('scroll', () => {
-    scrolled.value = window.scrollY > 40
-  })
+    const y = window.scrollY
+    scrolled.value = y > 40
+    hidden.value = y > 80 && y > lastY
+    lastY = y
+  }, { passive: true })
 })
 </script>
 
@@ -113,7 +118,10 @@ onMounted(() => {
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border-bottom: 1px solid rgba(255,255,255,0.04);
-  transition: background 0.3s ease, border-color 0.3s ease;
+  transition: background 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+}
+.header--hidden {
+  transform: translateY(-100%);
 }
 
 .header--scrolled {
