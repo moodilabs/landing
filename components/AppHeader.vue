@@ -38,6 +38,7 @@
 <script setup lang="ts">
 const { locale, setLocale } = useI18n()
 const localeCookie = useCookie('moodi_locale', { maxAge: 60 * 60 * 24 * 365 })
+const route = useRoute()
 
 const scrolled = ref(false)
 const menuOpen = ref(false)
@@ -84,8 +85,6 @@ function scrollTo(id: string) {
     window.scrollTo({ top, behavior: 'smooth' })
   }
 }
-
-const route = useRoute()
 
 function scrollToTop() {
   if (route.path !== '/') {
