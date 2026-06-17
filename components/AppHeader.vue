@@ -74,6 +74,10 @@ function goToWaitlist() {
 
 function scrollTo(id: string) {
   menuOpen.value = false
+  if (route.path !== '/') {
+    navigateTo(`/#${id}`)
+    return
+  }
   const el = document.getElementById(id)
   if (el) {
     const top = el.getBoundingClientRect().top + window.scrollY - 80
