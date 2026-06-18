@@ -104,15 +104,15 @@
                     <div class="spot-card card-short" style="background-image:url('/images/feed-2.jpeg');background-size:cover;background-position:center">
                       <div class="spot-overlay" />
                       <div class="spot-info">
-                        <span class="spot-tag">#Film</span>
-                        <p class="spot-name">Mangwon Cafe</p>
+                        <span class="spot-tag">#Minimal</span>
+                        <p class="spot-name">Mangwon View</p>
                       </div>
                     </div>
                     <div class="spot-card card-short" style="background-image:url('/images/feed-3.jpeg');background-size:cover;background-position:center">
                       <div class="spot-overlay" />
                       <div class="spot-info">
-                        <span class="spot-tag">#Local</span>
-                        <p class="spot-name">Yeonnam Alley</p>
+                        <span class="spot-tag">#Film</span>
+                        <p class="spot-name">Songdo Garden</p>
                       </div>
                     </div>
                   </div>
