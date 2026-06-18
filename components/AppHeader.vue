@@ -240,7 +240,7 @@ onMounted(() => {
 .hamburger.active span:nth-child(2) { opacity: 0; }
 .hamburger.active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .nav {
     display: none;
     position: fixed;

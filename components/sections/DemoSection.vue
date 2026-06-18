@@ -7,21 +7,6 @@
         <p class="section-sub">{{ $t('demo.subtitle') }}</p>
       </div>
 
-      <!-- Mobile: step dots -->
-      <div class="step-dots">
-        <div
-          v-for="(step, i) in steps"
-          :key="i"
-          class="step-dot-wrap"
-          @click="jumpTo(i)"
-        >
-          <div class="step-dot" :class="{ active: currentSlide === i }">
-            <span>0{{ i + 1 }}</span>
-          </div>
-          <div v-if="i < steps.length - 1" class="step-dot-line" :class="{ active: currentSlide > i }" />
-        </div>
-      </div>
-
       <div class="demo-layout">
         <!-- Phone mockup -->
         <div class="phone-outer">
@@ -317,51 +302,6 @@ onUnmounted(() => { if (timer) clearInterval(timer) })
 .demo-section { overflow: hidden; }
 .section-sub { color: rgba(255,255,255,0.5); }
 
-/* ── Mobile step dots (hidden on desktop) ── */
-.step-dots {
-  display: none;
-  align-items: center;
-  justify-content: center;
-  gap: 0;
-  margin-bottom: 36px;
-}
-.step-dot-wrap {
-  display: flex;
-  align-items: center;
-}
-.step-dot {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 11px;
-  font-weight: 800;
-  color: rgba(255,255,255,0.3);
-  background: rgba(255,255,255,0.06);
-  border: 1.5px solid rgba(255,255,255,0.1);
-  cursor: pointer;
-  transition: all 0.3s ease;
-  flex-shrink: 0;
-}
-.step-dot.active {
-  background: var(--purple);
-  border-color: var(--purple);
-  color: white;
-  box-shadow: 0 0 20px rgba(92,67,232,0.5);
-}
-.step-dot-line {
-  width: 32px;
-  height: 2px;
-  background: rgba(255,255,255,0.1);
-  transition: background 0.3s ease;
-  flex-shrink: 0;
-}
-.step-dot-line.active {
-  background: var(--purple);
-}
-
 /* ── Layout ── */
 .demo-layout {
   display: flex;
@@ -454,11 +394,11 @@ onUnmounted(() => { if (timer) clearInterval(timer) })
   pointer-events: auto;
 }
 
-/* mobile step info transition */
-.fade-up-leave-active { transition: opacity 0.15s ease; }
-.fade-up-enter-active { transition: opacity 0.2s ease 0.15s; }
-.fade-up-enter-from { opacity: 0; }
-.fade-up-leave-to { opacity: 0; }
+/* mobile step info transition — synced with phone slide crossfade (0.35s) */
+.fade-up-enter-active { transition: opacity 0.2s ease, transform 0.2s ease; }
+.fade-up-leave-active { transition: opacity 0.15s ease, transform 0.15s ease; }
+.fade-up-enter-from { opacity: 0; transform: translateY(10px); }
+.fade-up-leave-to { opacity: 0; transform: translateY(-8px); }
 
 /* ── Shared app components ── */
 .app-hdr { display: flex; justify-content: space-between; align-items: center; flex-shrink: 0; }
@@ -643,7 +583,6 @@ onUnmounted(() => { if (timer) clearInterval(timer) })
 
 /* ── Responsive ── */
 @media (max-width: 860px) {
-  .step-dots { display: flex; }
   .demo-steps { display: none; }
   .mobile-step-info { display: block; margin-top: 32px; text-align: center; }
 
@@ -699,9 +638,6 @@ onUnmounted(() => { if (timer) clearInterval(timer) })
   .d-island { display: none; }
   .d-status { padding-top: 12px; }
 
-  .step-dots { margin-bottom: 20px; }
-  .step-dot { width: 30px; height: 30px; font-size: 9px; }
-  .step-dot-line { width: 16px; }
   .mobile-step-info { margin-top: 20px; }
   .mobile-step-title { font-size: 18px; margin-bottom: 6px; }
   .mobile-step-desc { font-size: 13px; }
