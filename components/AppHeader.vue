@@ -75,8 +75,7 @@ function goToWaitlist() {
 }
 
 function smoothScrollTo(top: number) {
-  window.scrollTo({ top: window.scrollY, behavior: 'instant' as ScrollBehavior })
-  requestAnimationFrame(() => window.scrollTo({ top, behavior: 'smooth' }))
+  window.scrollTo({ top, behavior: 'smooth' })
 }
 
 function scrollTo(id: string) {

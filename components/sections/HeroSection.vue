@@ -8,8 +8,7 @@
     </div>
     <div class="container">
       <div class="hero-content">
-        <span class="badge">{{ $t('hero.badge') }}</span>
-        <p class="hero-eyebrow">{{ $t('hero.eyebrow') }}</p>
+        <span class="badge">{{ $t('hero.eyebrow') }} · {{ $t('hero.badge') }}</span>
         <h1 class="hero-title" v-html="titleHtml" />
         <p class="hero-subtitle">{{ $t('hero.subtitle') }}</p>
         <div class="hero-ctas">
@@ -181,8 +180,7 @@ function scrollToWaitlist() {
   const el = document.getElementById('waitlist')
   if (el) {
     const top = el.getBoundingClientRect().top + window.scrollY - 80
-    window.scrollTo({ top: window.scrollY, behavior: 'instant' as ScrollBehavior })
-    requestAnimationFrame(() => window.scrollTo({ top, behavior: 'smooth' }))
+    window.scrollTo({ top, behavior: 'smooth' })
   }
 }
 </script>
@@ -246,16 +244,8 @@ function scrollToWaitlist() {
   font-size: 12px;
   font-weight: 600;
   color: var(--purple-200);
-  margin-bottom: 20px;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-}
-
-.hero-eyebrow {
-  font-size: 14px;
-  font-weight: 500;
-  color: rgba(255,255,255,0.45);
-  margin-bottom: 16px;
+  margin-bottom: 24px;
+  letter-spacing: 0.02em;
 }
 
 .hero-title {
