@@ -91,7 +91,7 @@
 
                 <!-- 스팟 카드 그리드 -->
                 <div class="spot-grid">
-                  <div class="spot-card card-tall" style="background:linear-gradient(160deg,#735EED 0%,#3819A9 100%)">
+                  <div class="spot-card card-tall" style="background-image:url('/images/upload-1.jpeg');background-size:cover;background-position:center">
                     <div class="spot-overlay" />
                     <div class="spot-info">
                       <span class="spot-tag">#Retro Cafe</span>
@@ -103,14 +103,14 @@
                     </div>
                   </div>
                   <div class="spot-col">
-                    <div class="spot-card card-short" style="background:linear-gradient(160deg,#4D4F58 0%,#1E1F24 100%)">
+                    <div class="spot-card card-short" style="background-image:url('/images/feed-2.jpeg');background-size:cover;background-position:center">
                       <div class="spot-overlay" />
                       <div class="spot-info">
                         <span class="spot-tag">#Film</span>
                         <p class="spot-name">Mangwon Cafe</p>
                       </div>
                     </div>
-                    <div class="spot-card card-short" style="background:linear-gradient(160deg,#9A8CF8 0%,#572DEF 100%)">
+                    <div class="spot-card card-short" style="background-image:url('/images/feed-3.jpeg');background-size:cover;background-position:center">
                       <div class="spot-overlay" />
                       <div class="spot-info">
                         <span class="spot-tag">#Local</span>
