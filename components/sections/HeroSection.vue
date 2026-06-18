@@ -626,13 +626,10 @@ function scrollToWaitlist() {
   .container { flex-direction: column; text-align: center; }
   .hero-subtitle { max-width: 100%; margin-left: auto; margin-right: auto; }
   .hero-ctas { justify-content: center; }
-  .hero-visual { order: -1; }
-  .float-card-1 { left: -20px; }
-  .float-card-2 { right: -10px; }
+  .hero-visual { display: none; }
 }
 
 @media (max-width: 480px) {
   .hero { padding: 68px 0; justify-content: center; }
-  .hero-visual { display: none; }
 }
 </style>
