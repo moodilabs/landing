@@ -17,7 +17,6 @@
             {{ $t('nav.cta') }}
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </button>
-          <span class="hero-coming">{{ $t('hero.badge') }}</span>
         </div>
       </div>
 
@@ -293,12 +292,6 @@ function scrollToWaitlist() {
   box-shadow: 0 0 24px rgba(92, 67, 232, 0.5);
 }
 .cta-btn:hover { background: #6d55f0; transform: translateY(-2px); box-shadow: 0 0 36px rgba(92, 67, 232, 0.7); }
-
-.hero-coming {
-  font-size: 13px;
-  color: rgba(255,255,255,0.35);
-  font-weight: 500;
-}
 
 /* ===== 리얼 폰 목업 ===== */
 .hero-visual {
