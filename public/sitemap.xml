@@ -11,4 +11,10 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://moodi.kr/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://moodi.kr/" />
   </url>
+  <url>
+    <loc>https://moodi.kr/privacy</loc>
+    <lastmod>2026-06-18</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
 </urlset>
